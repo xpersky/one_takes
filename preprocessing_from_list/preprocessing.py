@@ -37,7 +37,7 @@ def preProcess(value,index):
     except:
         return 0 # status bad
 
-def GENOB(arr,size,directory,target):
+def preprocess_parallel(arr,size,directory,target):
     args = [ (name,size,directory,target) for name in arr]
     status = parallel(preProcess,args)
     if status == len(arr):
