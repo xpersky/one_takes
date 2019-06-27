@@ -190,7 +190,7 @@ def cluster(polygons,L):
     
     return clusters
 
-def GRUPO(polygons,L):
+def count_clusters(polygons,L):
     clusters = cluster(polygons,L)
     print(len(clusters))
     return clusters
@@ -369,7 +369,7 @@ def visualise(polygons,clusters):
 def test(dist):
     p = generatePolygons(50,5,75,(10000,10000))
     visualise(p,[])
-    cl = GRUPO(p,dist)
+    cl = count_clusters(p,dist)
     for item in cl:
         print(item)
     visualise(p,cl)
